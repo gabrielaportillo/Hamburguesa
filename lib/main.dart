@@ -30,7 +30,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
     Widget child;
     switch (_index) {
       case 0:
-        child = MaterialApp(debugShowCheckedModeBanner: false, home: new FirstPage());
+        child = FlutterLogo();
         break;
       case 1:
         child = MaterialApp(debugShowCheckedModeBanner: false, home: new SecondPage());
