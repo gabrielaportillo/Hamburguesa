@@ -50,7 +50,6 @@ class FourPage extends StatelessWidget {
                     maxRadius: 35.0,
                   ),
                   title: Text(producto, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0)),
-                  subtitle: Text('SSD de 256 GB en buen estado', style: TextStyle(fontSize: 9.0)),
                   trailing: Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.white,
