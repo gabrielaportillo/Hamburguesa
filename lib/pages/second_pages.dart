@@ -34,16 +34,7 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFFF44336),
-        centerTitle: true,
-        title: Text(
-          'OXXO',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
+      
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
