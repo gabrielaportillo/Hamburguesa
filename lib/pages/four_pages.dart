@@ -25,7 +25,7 @@ class FourPage extends StatelessWidget {
                 SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Higiene'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image13.JPG', 'Bebidas'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/bebidas.jpg', 'Bebidas'),
                 SizedBox(height: 15.0),
               ],
             ),
