@@ -33,7 +33,7 @@ class FourPage extends StatelessWidget {
 
   Widget _items(String url, String producto) {
     return Container(
-      padding: EdgeInsets.only(top: 5.0, right: 10.0, left: 10.0),
+      padding: EdgeInsets.only(top: 15.0, right: 10.0, left: 10.0),
       child: Card(
         color: Colors.redAccent,
         elevation: 10.0,
