@@ -65,7 +65,7 @@ class SecondPage extends StatelessWidget {
                     TextField(
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.amber.shade100,
+                        fillColor: Colors.gray,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide.none,
