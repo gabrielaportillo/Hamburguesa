@@ -48,7 +48,7 @@ class PaginaInicio extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Portillo Gabriela',
+                    'Año con año nos hemos convertido en parte del estilo de vida de muchas personas, ya que en OXXO nos preocupamos por brindar una amplia oferta de productos y servicios que les sean útiles y prácticos para su vida diaria.',
                     style: TextStyle(fontSize: 18),
                   ),
                 ), //fin child center
