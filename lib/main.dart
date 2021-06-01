@@ -37,6 +37,9 @@ class _PaginaInicioState extends State<PaginaInicio> {
       case 2:
         child = MaterialApp(debugShowCheckedModeBanner: false, home: new ThirdPage());
         break;
+      case 3:
+        child = MaterialApp(debugShowCheckedModeBanner: false, home: new FourPage());
+        break;
     } // Switch
     return Scaffold(
       body: SizedBox.expand(child: child),
@@ -56,6 +59,10 @@ class _PaginaInicioState extends State<PaginaInicio> {
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart_rounded, size: 30.0), //icon
               title: Text('Compras')),
+          //4 item
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart_rounded, size: 30.0), //icon
+              title: Text('Promociones')),
         ],
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
