@@ -41,7 +41,7 @@ class FourPage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 15.0, right: 10.0, left: 10.0),
       child: Card(
-        color: Colors.orange[200],
+        color: Colors.orange,
         elevation: 10.0,
         child: Column(
           children: <Widget>[
