@@ -14,17 +14,17 @@ class FourPage extends StatelessWidget {
             child: ListView(
               children: <Widget>[
                 _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Teclado'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image02.JPG', 'Escritorio'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Comida'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image13.JPG', 'Comida asiatica'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/deporte.jpg', 'Deporte'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/usuario.jpg', 'Usuario'),
-                SizedBox(height: 5.0),
+                SizedBox(height: 15.0),
               ],
             ),
           ), //fin de container
