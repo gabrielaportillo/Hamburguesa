@@ -1,121 +1,101 @@
 import 'package:flutter/material.dart';
 
-class ThirdPage extends StatefulWidget {
+class ThirdPage extends StatelessWidget {
   @override
-  _ThirdPageState createState() => _ThirdPageState();
-}
+   Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "MI EJEMPLO",
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+        visualDensity: VisualDensity.adaptivePlatformDensity, //finvisualdensity
+      ), //fin theme
+      home: PaginaInicio(),
+    ); //fin del returnmaterialapp
+  } //finbuildmifotoapp
+} //finclasefoto
 
-class _ThirdPageState extends State<ThirdPage> {
+class PaginaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 300, minWidth: 200),
-        child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Bordes en la app de Portillo"),
+        centerTitle: true,
+      ), //fin appbar
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 80.0,
-              ),
+            children: [
+              SizedBox(height: 20),
+
               Container(
-                color: Colors.red[800],
-                height: 200,
-                width: 350,
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                height: 200,
-                width: 250,
+                height: 100,
+                width: 200,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.deepOrangeAccent[400],
-                      Colors.deepOrangeAccent,
-                      Colors.deepOrangeAccent[100],
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
+                  color: Colors.orange[100],
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(
+                    color: Colors.orange,
+                    width: 5,
                   ),
                 ),
-                child: Container(
-                  padding: EdgeInsets.only(top: 10.0, bottom: 16),
+                child: Center(
                   child: Text(
-                    'Somos tu mejor opcion',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    'Portillo Gabriela',
+                    style: TextStyle(fontSize: 18),
                   ),
-                ),
-              ),
+                ), //fin child center
+              ), //fin de el container nombre
               SizedBox(
-                height: 20.0,
+                height: 50,
               ),
               Container(
-                height: 50,
-                width: 100,
-                alignment: Alignment.center,
+                height: 150,
+                width: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.amber,
-                      Colors.amber[400],
-                      Colors.amber[300],
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                  ),
-                ),
-                child: Text(
-                  'Bienvenido',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              InkWell(
-                onTap: () {
-                  print('sky');
-                },
-                child: Container(
-                  width: 110,
-                  height: 110,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.brown[50],
-                        Colors.brown[100],
-                        Colors.brown[200],
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
+                  color: Colors.grey,
+                  image: DecorationImage(image: NetworkImage("https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/187021808_779446012960156_9068408711927547600_n.jpg"), alignment: Alignment.topCenter),
+                  border: Border(
+                    top: BorderSide(
+                      color: Colors.grey,
+                      width: 5.0,
+                    ),
+                    bottom: BorderSide(
+                      color: Colors.grey,
+                      width: 5.0,
                     ),
                   ),
-                  child: ImageIcon(
-                    AssetImage("assets/images/corazon.png"),
-                    size: 100,
-                    color: Colors.white,
+                ), //fin de el decoration box
+              ), //fin de el container foto
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                height: 100,
+                width: 200,
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.orange,
+                        width: 5.0,
+                      ),
+                    ),
+                    //! Change the Focused Border
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.orange,
+                        width: 5.0,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              ), //fin de el container del texto del grupo
+            ], //fin del children
+          ), //fin de la columna child
+        ), //fin del bodycenter
+      ), //finsinglechild
+    ); //fin scaffold
+  } //fin build widget pagina de inicio
+} //fin clase pagina de inicio
