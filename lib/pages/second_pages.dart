@@ -98,7 +98,7 @@ class SecondPage extends StatelessWidget {
                             child: Text('Cancelar'),
                             onPressed: () {}), // Botón Login
                         SizedBox(
-                          width: 10,
+                          width: 30,
                         ),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
