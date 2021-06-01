@@ -49,7 +49,7 @@ class FourPage extends StatelessWidget {
                     backgroundImage: NetworkImage(url),
                     maxRadius: 35.0,
                   ),
-                  title: Text(producto, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0)),
+                  title: Text(producto, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0)),
                   trailing: Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.white,
