@@ -6,17 +6,11 @@ class FourPage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('App Tarjetas Gaby'),
-            actions: <Widget>[
-              IconButton(icon: Icon(Icons.add_a_photo), onPressed: () {}),
-            ], //fin de widget
-          ),
           body: Container(
             child: ListView(
               children: <Widget>[
-                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Teclado'),
-                SizedBox(height: 5.0),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Dulceria'),
+                SizedBox(height: 10.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image02.JPG', 'Escritorio'),
                 SizedBox(height: 5.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Comida'),
