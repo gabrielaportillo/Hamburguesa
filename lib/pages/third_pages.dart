@@ -5,7 +5,14 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cards'),
+        backgroundColor: Color(0xFFF44336),
+        centerTitle: true,
+        title: Text(
+          'OXXO',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20),
@@ -64,7 +71,7 @@ class ThirdPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Soy una card con imagen'),
+              child: Text('Servicios'),
             )
           ],
         ),
