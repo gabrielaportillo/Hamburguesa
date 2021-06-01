@@ -71,7 +71,7 @@ class ThirdPage extends StatelessWidget {
       ),
     );
   }
-}
+
 
   Widget _crearCard3() {
     return Card(
