@@ -41,7 +41,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ),
                 ),
                 child: Container(
-                  padding: EdgeInsets.only(top: 10.0, bottom: 16),
+                  padding: EdgeInsets.only(top: 10.0, bottom: 6),
                   child: Text(
                     'Somos tu mejor opcion',
                     textAlign: TextAlign.center,
