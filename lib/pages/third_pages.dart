@@ -2,106 +2,94 @@ import 'package:flutter/material.dart';
 
 class ThirdPage extends StatelessWidget {
   @override
-   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "MI EJEMPLO",
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-        visualDensity: VisualDensity.adaptivePlatformDensity, //finvisualdensity
-      ), //fin theme
-      home: PaginaInicio(),
-    ); //fin del returnmaterialapp
-  } //finbuildmifotoapp
-} //finclasefoto
-
-class PaginaInicio extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        backgroundColor: Color(0xFFF44336),
-        centerTitle: true,
-        title: Text(
-          'OXXO',
-          style: TextStyle(
-            color: Colors.white,
+      appBar: AppBar(
+        title: Text('Cards'),
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              _crearCard1(),
+              _crearCard2(),
+              _crearCard3()
+            ],
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(height: 50),
+    );
+  }
 
-              Container(
-                height: 100,
-                width: 200,
-                decoration: BoxDecoration(
-                  color: Colors.orange[100],
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(
-                    color: Colors.orange,
-                    width: 5,
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    'Año con año nos hemos convertido en parte del estilo de vida de muchas personas, ya que en OXXO nos preocupamos por brindar una amplia oferta de productos y servicios que les sean útiles y prácticos para su vida diaria.',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ), //fin child center
-              ), //fin de el container nombre
-              SizedBox(
-                height: 50,
+  Widget _crearCard1() {
+    return Card(
+      elevation: 5,
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: <Widget>[
+            Text(
+              'Soy una Card',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text('Dolore aliquip exercitation eiusmod elit est incididunt sint mollit aliqua ex. Pariatur ullamco dolore in ad mollit veniam occaecat. Irure sint elit quis minim.')
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _crearCard2() {
+    return Card(
+      elevation: 5,
+      color: Colors.deepPurple,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: <Widget>[
+            Text(
+              'Soy una Card',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Dolore aliquip exercitation eiusmod elit est incididunt sint mollit aliqua ex. Pariatur ullamco dolore in ad mollit veniam occaecat. Irure sint elit quis minim.',
+              style: TextStyle(color: Colors.white),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _crearCard3() {
+    return Card(
+      elevation: 5,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        child: Column(
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+              child: FadeInImage(
+                placeholder: AssetImage('assets/loading.gif'),
+                image: NetworkImage('https://hipertextual.com/files/2019/09/hipertextual-the-legend-of-zelda-links-awakening-2019999870.jpg'),
               ),
-              Container(
-                height: 150,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  image: DecorationImage(image: NetworkImage("https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/187021808_779446012960156_9068408711927547600_n.jpg"), alignment: Alignment.topCenter),
-                  border: Border(
-                    top: BorderSide(
-                      color: Colors.grey,
-                      width: 5.0,
-                    ),
-                    bottom: BorderSide(
-                      color: Colors.grey,
-                      width: 5.0,
-                    ),
-                  ),
-                ), //fin de el decoration box
-              ), //fin de el container foto
-              SizedBox(
-                height: 50,
-              ),
-              Container(
-                height: 100,
-                width: 200,
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.orange,
-                        width: 5.0,
-                      ),
-                    ),
-                    //! Change the Focused Border
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.orange,
-                        width: 5.0,
-                      ),
-                    ),
-                  ),
-                ),
-              ), //fin de el container del texto del grupo
-            ], //fin del children
-          ), //fin de la columna child
-        ), //fin del bodycenter
-      ), //finsinglechild
-    ); //fin scaffold
-  } //fin build widget pagina de inicio
-} //fin clase pagina de inicio
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Soy una card con imagen'),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
