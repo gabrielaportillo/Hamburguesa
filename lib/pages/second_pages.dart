@@ -61,11 +61,17 @@ class SecondPage extends StatelessWidget {
                         hintText: 'Correo electronico',
                       ),
                     ), //Campo de Texto
-                    SizedBox(height: 20),
+                    SizedBox(height: 16),
                     TextField(
                       decoration: InputDecoration(
-                        hintText:"Contraseña",
-                        icon: Icon(Icons.vpn_key_rounded)
+                        filled: true,
+                        fillColor: Colors.amber.shade100,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide.none,
+                        ),
+                        suffixIcon: Icon(Icons.vpn_key_rounded),
+                        hintText: 'Contraseña',
                       ),
                     ), //Campo de Texto
                     SizedBox(
