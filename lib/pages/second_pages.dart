@@ -46,7 +46,7 @@ class _InicioState extends State<Inicio> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.network(
-                  'https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxo2.png',
+                  'https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxo.jpg',
                   fit: BoxFit.cover,
                 ),
               ), //fin de Imagen 
