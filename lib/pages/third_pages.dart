@@ -19,10 +19,16 @@ class PaginaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Bordes en la app de Portillo"),
+        appBar: AppBar(
+        backgroundColor: Color(0xFFF44336),
         centerTitle: true,
-      ), //fin appbar
+        title: Text(
+          'OXXO',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
