@@ -19,11 +19,11 @@ class FourPage extends StatelessWidget {
           body: Container(
             child: ListView(
               children: <Widget>[
-                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Dulceria'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/dulces.jpg', 'Dulceria'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image02.JPG', 'Limpieza'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/limpieza.jpg', 'Limpieza'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Higiene'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/higiene.jpg', 'Higiene'),
                 SizedBox(height: 15.0),
                 _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/bebidas.jpg', 'Bebidas'),
                 SizedBox(height: 15.0),
