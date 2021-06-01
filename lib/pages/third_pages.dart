@@ -76,20 +76,22 @@ class ThirdPage extends StatelessWidget {
   Widget _crearCard3() {
     return Card(
       elevation: 5,
+      color: Colors.gray,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
+        padding: EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-              child: FadeInImage(
-                placeholder: AssetImage('oxxogas.jpg'),
-                image: NetworkImage('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxogas.jpg'),
-              ),
+            Text(
+              'Mision',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('Soy una card con imagen'),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Satisfacer en todo momento y con pasión las necesidades cotidianas del consumidor, simplificándole su vida, para que disfrute más su día.',
+              style: TextStyle(color: Colors.white),
             )
           ],
         ),
