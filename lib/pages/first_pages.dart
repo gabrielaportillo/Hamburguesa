@@ -4,7 +4,6 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Colors.white,
       body: Container(
         child: Center(
@@ -18,7 +17,7 @@ class FirstPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "Soy la primer pagina!",
+                "¡Bienvenido a la pagina de oxxo!",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
               )
             ],
