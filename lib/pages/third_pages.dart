@@ -32,7 +32,7 @@ class ThirdPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Text(
-              'Soy una Oxxo',
+              'Oxxo',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
             SizedBox(
@@ -48,31 +48,30 @@ class ThirdPage extends StatelessWidget {
     );
   }
 
-  Widget _crearCard2() {
+ Widget _crearCard2() {
     return Card(
       elevation: 5,
-      color: Colors.deepPurple,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        padding: EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
-            Text(
-              'Soy una Card',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
+            ClipRRect(
+              borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+              child: FadeInImage(
+                placeholder: AssetImage('oxxogas.jpg'),
+                image: NetworkImage('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxogas.jpg'),
+              ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Dolore aliquip exercitation eiusmod elit est incididunt sint mollit aliqua ex. Pariatur ullamco dolore in ad mollit veniam occaecat. Irure sint elit quis minim.',
-              style: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Soy una card con imagen'),
             )
           ],
         ),
       ),
     );
   }
+}
 
   Widget _crearCard3() {
     return Card(
