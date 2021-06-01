@@ -30,7 +30,7 @@ class ThirdPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Text(
-              'Soy una Card',
+              'Oxxo',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             SizedBox(
