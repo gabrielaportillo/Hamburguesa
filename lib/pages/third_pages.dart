@@ -25,18 +25,23 @@ class ThirdPage extends StatelessWidget {
   Widget _crearCard1() {
     return Card(
       elevation: 5,
+      color: Colors.orange[300],
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
         padding: EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
             Text(
-              'Oxxo',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              'Soy una Oxxo',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
             SizedBox(
               height: 20,
             ),
-            Text('Año con año nos hemos convertido en parte del estilo de vida de muchas personas, ya que en OXXO nos preocupamos por brindar una amplia oferta de productos y servicios que les sean útiles y prácticos para su vida diaria.')
+            Text(
+              'Año con año nos hemos convertido en parte del estilo de vida de muchas personas, ya que en OXXO nos preocupamos por brindar una amplia oferta de productos y servicios que les sean útiles y prácticos para su vida diaria.',
+              style: TextStyle(color: Colors.white),
+            )
           ],
         ),
       ),
