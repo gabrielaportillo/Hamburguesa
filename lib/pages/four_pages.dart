@@ -40,7 +40,7 @@ class FourPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-                margin: EdgeInsets.only(left: 3.0),
+                margin: EdgeInsets.only(left: 5.0),
                 padding: EdgeInsets.only(left: 0.5),
                 child: ListTile(
                   contentPadding: EdgeInsets.only(left: 0.2),
