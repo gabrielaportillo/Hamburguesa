@@ -98,17 +98,14 @@ class SecondPage extends StatelessWidget {
                             child: Text('Cancelar'),
                             onPressed: () {}), // Botón Login
                         SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
+                          width: 10,
+                        ),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.all(20.0),
-                              primary: Colors.red,
+                              primary: Colors.black,
                             ),
-                            child: Text('Iniciar Sesión sin usuario'),
+                            child: Text('Iniciar sesion sin usuario'),
                             onPressed: () {}), // Botón Login
                       ],
                     ),
