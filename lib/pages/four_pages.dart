@@ -19,17 +19,13 @@ class FourPage extends StatelessWidget {
           body: Container(
             child: ListView(
               children: <Widget>[
-                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Teclado'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image01.JPG', 'Dulceria'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image02.JPG', 'Escritorio'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/galeria/master/images/image02.JPG', 'Limpieza'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Comida'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image05.JPG', 'Higiene'),
                 SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image13.JPG', 'Comida asiatica'),
-                SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/deporte.jpg', 'Deporte'),
-                SizedBox(height: 15.0),
-                _items('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/usuario.jpg', 'Usuario'),
+                _items('https://raw.githubusercontent.com/gabrielaportillo/Misfotos/main/FotoFamilia-main/image13.JPG', 'Bebidas'),
                 SizedBox(height: 15.0),
               ],
             ),
