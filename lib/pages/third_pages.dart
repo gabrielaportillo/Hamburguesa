@@ -76,7 +76,7 @@ class ThirdPage extends StatelessWidget {
   Widget _crearCard3() {
     return Card(
       elevation: 5,
-      color: Colors.gray,
+      color: Colors.orange[400],
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
         padding: EdgeInsets.all(20),
