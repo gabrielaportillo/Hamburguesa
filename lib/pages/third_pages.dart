@@ -80,7 +80,7 @@ class ThirdPage extends StatelessWidget {
               borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
               child: FadeInImage(
                 placeholder: AssetImage('oxxogas.jpg'),
-                image: NetworkImage('https://hipertextual.com/files/2019/09/hipertextual-the-legend-of-zelda-links-awakening-2019999870.jpg'),
+                image: NetworkImage('https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxogas.jpg'),
               ),
             ),
             Padding(
