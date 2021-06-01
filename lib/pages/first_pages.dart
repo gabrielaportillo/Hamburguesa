@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class FourPage extends StatefulWidget {
+class FirstPage extends StatefulWidget {
   @override
-  _FourPageState createState() => _FourPageState();
+  _FirstPageState createState() => _FirstPageState();
 }
-
+class _FirstPageState extends State<FirstPage> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
