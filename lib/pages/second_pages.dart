@@ -1,111 +1,187 @@
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ui.Size logicalSize = MediaQuery.of(context).size;
-    final double _height = logicalSize.height;
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'App Portillo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Inicio(title: 'Gabriela Portillo'),
+    ); //App Material
+  } //Constructor
+} //Clase MiApphat
+
+class Inicio extends StatefulWidget {
+  Inicio({Key key, this.title}) : super(key: key);
+  final String title;
+  @override
+  _InicioState createState() => _InicioState();
+}
+class _InicioState extends State<Inicio> {
+  String elegirValor;
+  List listItem = [
+    '1997',
+    '1998',
+    '1999',
+    '2000',
+    '2001',
+    '2002',
+    '2003'
+  ];
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          padding: EdgeInsets.symmetric(horizontal: 30.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 65),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        'MI OXXO',
-                        style: new TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40.0,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ],
-                  ),
-                ), //contenedor
-                SizedBox(height: 10),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(2.0),
-                      child: Stack(
-                        children: <Widget>[
-                          Align(
-                            child: new Image(
-                              width: 250.0,
-                              height: 165.1,
-                              image: new AssetImage('assets/images/oxxo.jpg'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.amber.shade100,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide.none,
-                        ),
-                        suffixIcon: Icon(Icons.account_box),
-                        hintText: 'Correo electronico',
-                      ),
-                    ), //Campo de Texto
-                    SizedBox(height: 16),
-                    TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.amber.shade100,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide.none,
-                        ),
-                        suffixIcon: Icon(Icons.vpn_key_rounded),
-                        hintText: 'Contraseña',
-                      ),
-                    ), //Campo de Texto
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(20.0),
-                              primary: Colors.red,
-                            ),
-                            child: Text('Iniciar Sesión'),
-                            onPressed: () {}), // Botón Login
-                        SizedBox(
-                          width: 10,
-                        ),
-                        ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(20.0),
-                              primary: Colors.black,
-                            ),
-                            child: Text('Cancelar'),
-                            onPressed: () {}), // Botón Login
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+      appBar: AppBar(
+        backgroundColor: Color(0xFFF44336),
+        centerTitle: true,
+        title: Text(
+          'OXXO',
+          style: TextStyle(
+            color: Colors.white,
           ),
         ),
       ),
-    );
-  }
-}
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            LimitedBox(
+              maxWidth: 350.0,
+              maxHeight: 300.0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  'https://raw.githubusercontent.com/gabrielaportillo/mis_imagenes/main/oxxo2.png',
+                  fit: BoxFit.cover,
+                ),
+              ), //fin de Imagen 
+            ),
+
+            SizedBox(
+              height: 16,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Color(0xFFF44336),
+                  ),
+                ),
+                labelText: 'Nombre del usuario',
+              ),
+            ), //fin del campo de texto
+            SizedBox(
+              height: 16,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Color(0xFFF44336),
+                  ),
+                ),
+                labelText: 'Apellidos del usuario',
+              ),
+            ), //fin de campo de texto
+            SizedBox(
+              height: 16,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Color(0xFFF44336),
+                  ),
+                ),
+                labelText: 'Correo electronico',
+              ),
+            ), //fin de textField
+            SizedBox(
+              height: 16,
+            ),
+            Row(
+              children: <Widget>[
+                new Flexible(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0xFFF44336),
+                        ),
+                      ),
+                      labelText: 'Fecha de nacimiento (Dia y Mes)',
+                    ), //fin de Decoración de Textfield
+                  ), //fin del TexField
+                ),//fin de flexible
+                SizedBox(
+                  width: 16,
+                ),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  decoration: BoxDecoration(border: Border.all(color: Color(0xFFF44336), width: 1), borderRadius: BorderRadius.circular(4)),
+                  child: DropdownButton(
+                    hint: Text(
+                      "Año: ",
+                      style: TextStyle(
+                        color: Color(0xFF9E9E9E),
+                      ),
+                    ),
+                    dropdownColor: Color(0xFF5BDBDBD),
+                    icon: Icon(Icons.expand_more_rounded),
+                    iconSize: 20,
+                    underline: SizedBox(),
+                    value: elegirValor,
+                    onChanged: (newValue) {
+                      setState(() {
+                        elegirValor = newValue;
+                      });
+                    },
+                    items: listItem.map((valueItem) {
+                      return DropdownMenuItem(
+                        value: valueItem,
+                        child: Text(valueItem),
+                      ); //fin de Dropdown Menu Item
+                    }).toList(),
+                  ), //fin de Dropdown
+                ), //fin de Contenedor de Dropdown
+              ], //fin de Widgets dentro de Row
+            ), //fin del cuarto Row
+            SizedBox(
+              height: 16,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  label: Text('Iniciar sesion'),
+                  icon: Icon(Icons.check_rounded),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red,
+                    onPrimary: Colors.white,
+                    minimumSize: Size(140, 50),
+                  ),
+                ),
+                SizedBox(width: 16),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  label: Text('Cancelar'),
+                  icon: Icon(Icons.close_rounded),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.grey,
+                    onPrimary: Colors.white,
+                    minimumSize: Size(140, 50),
+                  ),
+                )
+              ], //fin de hijos de Row
+            ), //fin de row
+          ], //fin de Widgets dentro de Columna
+        ), //fin de Columna Principal
+      ),//fin de body
+    ); //fin del Scaffold
+  } //fin del Constructor
+} //fin de Clase Inicio
