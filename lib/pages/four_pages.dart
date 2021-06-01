@@ -6,10 +6,16 @@ class FourPage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('Oxxo'),
-            
+           appBar: AppBar(
+        backgroundColor: Color(0xFFF44336),
+        centerTitle: true,
+        title: Text(
+          'OXXO',
+          style: TextStyle(
+            color: Colors.white,
           ),
+        ),
+      ),
           body: Container(
             child: ListView(
               children: <Widget>[
