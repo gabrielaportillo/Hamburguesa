@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatelessWidget {
+class FourPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          'Primera Pagina',
-          style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-      ),
-    );
-  }
+  _FourPageState createState() => _FourPageState();
 }
+
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Empresa Oxxo',
+        theme: ThemeData(
+          //el fondo va dentro de el tema
+          primarySwatch: Colors.red,
+        ), //finthemedata
+        //ruta de ventanas enganchar a los widgets
+        
+        home: Inicio()); //cierre de material app
+  } //fin widget context
+} //fin VeterinariaApp class
